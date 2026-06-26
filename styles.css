@@ -462,6 +462,18 @@ em { font-style: normal; }
 .timeline__org { color: var(--text-muted); font-weight: 600; margin-bottom: 0.5rem; }
 .timeline__content > p:last-child { color: var(--text-muted); }
 
+/* ----- Experience (single role, narrative) ----- */
+.exp { max-width: 900px; display: grid; gap: 1.4rem; }
+.exp__role {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+.exp__card { padding: 1.75rem 2rem; transition: transform 0.3s ease, border-color 0.3s ease; }
+.exp__card:hover { transform: translateY(-3px); border-color: var(--border-strong); }
+.exp__card p { color: var(--text-muted); margin: 0; }
+
 /* ----- Projects ----- */
 .projects { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 1.5rem; }
 .project-card { padding: 1.8rem; display: flex; flex-direction: column; }
