@@ -1,0 +1,22 @@
+# Navang Gandhi
+
+> Navang Gandhi is a Security and AI Leader with 26+ years advising financial-services and regulated enterprises on cloud security, identity, zero-trust, and the safe adoption of generative and agentic AI.
+
+Personal site: https://navanggandhi.com
+
+Navang is a cloud security strategy and AI security leader. He guides CIOs, CISOs, and boards on security strategy, target operating models, IAM modernization, security architecture, and secure-AI governance — and on how to safely harness generative, LLM, and agentic AI to speed decisions, enhance cybersecurity, automate controls, and strengthen audit defensibility.
+
+## Focus areas
+- Cloud Security Strategy: security strategy, target operating models, and security architecture for complex, multi-year programs
+- AI & LLM Security: safe generative and agentic AI adoption, model-risk governance, audit-ready controls, cost modeling
+- Identity & IAM: IAM modernization, privileged access, passwordless authentication, identity governance and administration
+- Zero-Trust Architecture: segmentation, continuous verification, AI-driven threat detection, AI-augmented SOC
+- Governance & Compliance: PCI/SOX-aligned controls, NIST CSF 2.0-aligned strategy, executive reporting, remediation roadmaps
+
+## Hobbies
+- Long drives
+- Exploring and learning everything about AI
+
+## Contact
+- Email: navang@gmail.com
+- LinkedIn: https://www.linkedin.com/in/navang-gandhi-b0b08a5
