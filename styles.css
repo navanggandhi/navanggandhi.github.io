@@ -525,6 +525,39 @@ em { font-style: normal; }
 .project-card__tech { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.3rem; }
 .project-card__tech li { font-size: 0.8rem; font-weight: 500; color: var(--text-muted); border: 1px solid var(--border-strong); padding: 0.22rem 0.7rem; border-radius: 8px; }
 
+/* ----- AI Thought Leadership ----- */
+.insights__intro { color: var(--text-muted); font-size: 1.08rem; max-width: 720px; margin: -1.75rem 0 2.75rem; }
+.insights { display: grid; gap: 1.75rem; }
+.insight-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, border-color 0.3s ease; }
+.insight-card:hover { transform: translateY(-4px); border-color: var(--border-strong); }
+.insight-card__visual {
+  position: relative;
+  aspect-ratio: 40 / 15;
+  background: linear-gradient(135deg, #141229 0%, #1d1233 55%, #0b2230 100%);
+  overflow: hidden;
+}
+.insight-card__visual svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.insight-card__tag {
+  position: absolute; top: 1rem; left: 1rem;
+  font-family: var(--font-display); font-size: 0.74rem; font-weight: 600; color: #fff;
+  background: rgba(0, 0, 0, 0.35); border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.3rem 0.8rem; border-radius: 999px;
+  -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+}
+.insight-card__body { padding: 1.85rem 2rem 2rem; }
+.insight-card__date {
+  display: inline-block; font-family: var(--font-display); font-size: 0.8rem; font-weight: 600;
+  color: var(--accent); background: var(--accent-soft);
+  padding: 0.22rem 0.75rem; border-radius: 999px; margin-bottom: 0.8rem;
+}
+.insight-card__title { font-family: var(--font-display); font-size: clamp(1.3rem, 3vw, 1.7rem); letter-spacing: -0.4px; margin-bottom: 0.9rem; }
+.insight-card__body p { color: var(--text-muted); margin-bottom: 0.9rem; }
+.insight-card__body p em { font-family: var(--font-serif); font-style: italic; }
+.insight-card__links-title { font-family: var(--font-display); font-size: 0.98rem; margin: 1.3rem 0 0.6rem; color: var(--text); }
+.insight-card__links { display: grid; gap: 0.45rem; }
+.insight-card__links a { color: var(--accent); font-weight: 500; font-size: 0.95rem; }
+.insight-card__links a:hover { text-decoration: underline; }
+
 /* ----- Contact ----- */
 .contact { text-align: center; max-width: 720px; margin-inline: auto; padding: 4rem 2rem; box-shadow: var(--shadow-lg); }
 .contact .section__title { margin-bottom: 1.2rem; }
