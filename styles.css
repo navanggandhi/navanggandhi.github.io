@@ -557,6 +557,22 @@ em { font-style: normal; }
 .insight-card__links { display: grid; gap: 0.45rem; }
 .insight-card__links a { color: var(--accent); font-weight: 500; font-size: 0.95rem; }
 .insight-card__links a:hover { text-decoration: underline; }
+/* McKinsey-grade article elements: dek, stat callouts, data exhibit */
+.insight-card__dek { font-family: var(--font); font-size: 1.12rem; line-height: 1.55; color: var(--text); margin: -0.1rem 0 1.45rem; font-weight: 500; }
+.insight-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin: 0 0 1.7rem; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; background: var(--border); }
+.insight-stat { background: var(--surface-solid); padding: 1.05rem 1.15rem; }
+.insight-stat__num { display: block; font-family: var(--font-display); font-weight: 700; font-size: clamp(1.7rem, 4vw, 2.3rem); line-height: 1; letter-spacing: -1px; background: var(--gradient); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.insight-stat__label { display: block; margin-top: 0.5rem; font-size: 0.82rem; line-height: 1.4; color: var(--text-muted); }
+.insight-exhibit { margin: 1.8rem 0; padding: 1.4rem 1.6rem 1.2rem; border: 1px solid var(--border); border-radius: 16px; background: color-mix(in srgb, var(--surface-solid) 55%, transparent); }
+.insight-exhibit__label { display: inline-block; font-family: var(--font-display); font-size: 0.68rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.3rem; }
+.insight-exhibit__title { font-family: var(--font-display); font-size: 1.06rem; font-weight: 600; letter-spacing: -0.2px; color: var(--text); margin: 0 0 1.25rem; }
+.insight-exhibit svg { width: 100%; height: auto; display: block; }
+.insight-exhibit svg text { font-family: var(--font); fill: var(--text-muted); }
+.insight-exhibit svg .exh-cat { font-size: 13px; }
+.insight-exhibit svg .exh-val { font-family: var(--font-display); font-weight: 700; font-size: 13px; fill: var(--text); }
+.insight-exhibit svg .exh-track { fill: var(--border); }
+.insight-exhibit__source { margin: 1rem 0 0; font-size: 0.72rem; color: var(--text-soft); }
+@media (max-width: 560px) { .insight-stats { grid-template-columns: 1fr; } }
 
 /* ----- Contact ----- */
 .contact { text-align: center; max-width: 720px; margin-inline: auto; padding: 4rem 2rem; box-shadow: var(--shadow-lg); }
