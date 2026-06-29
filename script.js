@@ -37,8 +37,14 @@
     navToggle.classList.toggle("open", isOpen);
     navToggle.setAttribute("aria-expanded", String(isOpen));
   });
+  var navClickLock = 0;
   navMenu.querySelectorAll(".nav__link").forEach(function (link) {
     link.addEventListener("click", function () {
+      // Underline the clicked tab immediately, and hold it through the smooth scroll.
+      navMenu.querySelectorAll(".nav__link").forEach(function (l) {
+        l.classList.toggle("active", l === link);
+      });
+      navClickLock = Date.now();
       navMenu.classList.remove("open");
       navToggle.classList.remove("open");
       navToggle.setAttribute("aria-expanded", "false");
@@ -83,6 +89,7 @@
   if ("IntersectionObserver" in window) {
     const spy = new IntersectionObserver(
       function (entries) {
+        if (Date.now() - navClickLock < 900) return; // don't fight a fresh click
         entries.forEach(function (entry) {
           if (entry.isIntersecting) {
             const id = entry.target.getAttribute("id");
@@ -92,7 +99,8 @@
           }
         });
       },
-      { threshold: 0.5 }
+      // A thin detection band near mid-viewport — reliably tracks even tall sections.
+      { rootMargin: "-45% 0px -50% 0px", threshold: 0 }
     );
     sections.forEach(function (section) { spy.observe(section); });
   }
