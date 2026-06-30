@@ -61,7 +61,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,500&family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
 
-  <link rel="stylesheet" href="styles.css?v=4" />
+  <link rel="stylesheet" href="styles.css?v=5" />
 </head>
 <body>
   <!-- Scroll progress -->
@@ -84,6 +84,7 @@
         <li><a href="#about" class="nav__link">About</a></li>
         <li><a href="#insights" class="nav__link">AI Thought Leadership</a></li>
         <li><a href="#skills" class="nav__link">Skills</a></li>
+        <li><a href="#video" class="nav__link">Video</a></li>
         <li><a href="#experience" class="nav__link">Experience</a></li>
         <li><a href="#hobbies" class="nav__link">Hobbies</a></li>
         <li><a href="#contact" class="nav__link">Contact</a></li>
@@ -546,10 +547,122 @@
       </div>
     </section>
 
+    <!-- ============================= VIDEO ============================= -->
+    <section class="section" id="video">
+      <div class="container">
+        <p class="section__eyebrow reveal">04 — Video</p>
+        <h2 class="section__title reveal">Trends in <em>frontier</em> models</h2>
+        <p class="video__intro reveal">A one-minute animated brief on the shifts redefining AI at the frontier — and what they mean for security leaders.</p>
+
+        <div class="video glass reveal">
+          <div class="video__stage" id="video-stage" role="img" aria-label="Animated brief: trends in frontier AI models">
+            <svg width="0" height="0" aria-hidden="true" style="position:absolute">
+              <defs><linearGradient id="vg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8b5cf6"/><stop offset="0.55" stop-color="#ec4899"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs>
+            </svg>
+
+            <!-- Scene 0 — Title -->
+            <div class="vscene is-active" data-scene="0">
+              <svg class="vscene__orbit" viewBox="0 0 200 200" aria-hidden="true">
+                <circle cx="100" cy="100" r="78" fill="none" stroke="url(#vg)" stroke-width="1.5" stroke-dasharray="4 8" opacity="0.55"/>
+                <circle cx="100" cy="100" r="52" fill="none" stroke="url(#vg)" stroke-width="1.5" stroke-dasharray="2 10" opacity="0.45"/>
+                <circle cx="178" cy="100" r="5" fill="url(#vg)"/>
+                <circle cx="100" cy="48" r="4" fill="#22d3ee"/>
+              </svg>
+              <p class="vscene__kicker v-in">Frontier AI · 2026</p>
+              <h3 class="vscene__title vscene__title--xl v-in d1">Trends in <em>frontier</em> models</h3>
+              <p class="vscene__sub v-in d2">Five shifts redefining AI — in sixty seconds.</p>
+            </div>
+
+            <!-- Scene 1 — A new capability tier -->
+            <div class="vscene" data-scene="1">
+              <div class="vbars" aria-hidden="true">
+                <span class="vbar v-bar" style="height:34%"></span>
+                <span class="vbar v-bar d1" style="height:54%"></span>
+                <span class="vbar v-bar d2" style="height:74%"></span>
+                <span class="vbar vbar--peak v-bar d3" style="height:100%"></span>
+              </div>
+              <p class="vscene__kicker v-in">01 · A new capability tier</p>
+              <h3 class="vscene__title v-in d1">The ceiling keeps rising</h3>
+              <p class="vscene__sub v-in d2">Frontier models now rival expert humans in narrow domains like cybersecurity and biology.</p>
+            </div>
+
+            <!-- Scene 2 — The agentic shift -->
+            <div class="vscene" data-scene="2">
+              <svg class="vart" viewBox="0 0 320 150" aria-hidden="true">
+                <g stroke="url(#vg)" stroke-width="2" fill="none" opacity="0.75">
+                  <path class="v-draw" d="M160 75 L66 38"/><path class="v-draw" d="M160 75 L66 112"/>
+                  <path class="v-draw" d="M160 75 L254 38"/><path class="v-draw" d="M160 75 L254 112"/>
+                </g>
+                <circle class="v-pop" cx="160" cy="75" r="20" fill="url(#vg)"/>
+                <g fill="var(--surface-solid)" stroke="url(#vg)" stroke-width="2">
+                  <rect class="v-pop d1" x="52" y="24" width="28" height="28" rx="6"/>
+                  <rect class="v-pop d2" x="52" y="98" width="28" height="28" rx="6"/>
+                  <rect class="v-pop d2" x="240" y="24" width="28" height="28" rx="6"/>
+                  <rect class="v-pop d3" x="240" y="98" width="28" height="28" rx="6"/>
+                </g>
+              </svg>
+              <p class="vscene__kicker v-in">02 · The agentic shift</p>
+              <h3 class="vscene__title v-in d1">From answers to actions</h3>
+              <p class="vscene__sub v-in d2">AI is moving from systems that respond to systems that act — calling tools and completing tasks.</p>
+            </div>
+
+            <!-- Scene 3 — Dual-use & safety -->
+            <div class="vscene" data-scene="3">
+              <svg class="vart" viewBox="0 0 320 160" aria-hidden="true">
+                <path class="v-draw" d="M160 18 L210 38 L210 82 C210 114 188 134 160 144 C132 134 110 114 110 82 L110 38 Z" fill="none" stroke="url(#vg)" stroke-width="3"/>
+                <path class="v-pop d1" d="M142 80 L156 94 L184 60" fill="none" stroke="#22d3ee" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <p class="vscene__kicker v-in">03 · Dual-use &amp; safety</p>
+              <h3 class="vscene__title v-in d1">Capability gated by trust</h3>
+              <p class="vscene__sub v-in d2">The most powerful models now ship under controlled access — released by trust, not just by price.</p>
+            </div>
+
+            <!-- Scene 4 — Governance -->
+            <div class="vscene" data-scene="4">
+              <div class="vpills" aria-hidden="true">
+                <span class="vpill v-pop">Access controls</span>
+                <span class="vpill v-pop d1">Independent evals</span>
+                <span class="vpill v-pop d2">Usage policy</span>
+                <span class="vpill v-pop d3">Audit trail</span>
+              </div>
+              <p class="vscene__kicker v-in">04 · Governance moves in</p>
+              <h3 class="vscene__title v-in d1">Rules at the model layer</h3>
+              <p class="vscene__sub v-in d2">Access gating, independent evaluations, and audit are becoming standard for frontier systems.</p>
+            </div>
+
+            <!-- Scene 5 — The enterprise dividend -->
+            <div class="vscene" data-scene="5">
+              <svg class="vart" viewBox="0 0 320 150" aria-hidden="true">
+                <path d="M20 132 L300 132" stroke="var(--border-strong)" stroke-width="1.5"/>
+                <path class="v-draw vcurve" d="M20 122 C90 120 150 96 200 70 C242 48 276 30 300 16" fill="none" stroke="url(#vg)" stroke-width="3.5" stroke-linecap="round"/>
+                <circle class="v-pop d2" cx="300" cy="16" r="6" fill="#22d3ee"/>
+              </svg>
+              <p class="vscene__kicker v-in">05 · The enterprise dividend</p>
+              <h3 class="vscene__title v-in d1">Defenders who adopt, win</h3>
+              <p class="vscene__sub v-in d2">Organizations that govern the frontier — not just acquire it — will define the next decade.</p>
+            </div>
+
+            <!-- Scene 6 — Outro -->
+            <div class="vscene" data-scene="6">
+              <h3 class="vscene__title vscene__title--xl v-in"><span class="grad">Navang Gandhi</span></h3>
+              <p class="vscene__sub v-in d1">Security &amp; AI Leader · navanggandhi.com</p>
+            </div>
+          </div>
+
+          <div class="video__bar"><span id="video-progress"></span></div>
+          <div class="video__controls">
+            <button type="button" class="video__btn" id="video-play">▶ Play</button>
+            <button type="button" class="video__btn video__btn--ghost" id="video-replay">↻ Replay</button>
+            <span class="video__time"><span id="video-cur">0:00</span> / 1:00</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ============================= EXPERIENCE ============================= -->
     <section class="section" id="experience">
       <div class="container">
-        <p class="section__eyebrow reveal">04 — Experience</p>
+        <p class="section__eyebrow reveal">05 — Experience</p>
         <h2 class="section__title reveal">Where I've <em>been</em></h2>
 
         <div class="exp">
@@ -567,7 +680,7 @@
     <!-- ============================= HOBBIES ============================= -->
     <section class="section section--alt" id="hobbies">
       <div class="container">
-        <p class="section__eyebrow reveal">05 — Hobbies</p>
+        <p class="section__eyebrow reveal">06 — Hobbies</p>
         <h2 class="section__title reveal">Beyond <em>work</em></h2>
 
         <div class="skills">
@@ -589,7 +702,7 @@
     <section class="section" id="contact">
       <div class="container">
         <div class="contact glass reveal">
-          <p class="section__eyebrow">06 — Contact</p>
+          <p class="section__eyebrow">07 — Contact</p>
           <h2 class="section__title">Let's <em>connect</em></h2>
           <p class="contact__text">
             Have a question, an opportunity, or just want to say hello?
@@ -616,6 +729,6 @@
     </div>
   </footer>
 
-  <script src="script.js?v=3"></script>
+  <script src="script.js?v=5"></script>
 </body>
 </html>

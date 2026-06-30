@@ -192,6 +192,74 @@
     });
   })();
 
+  /* ---------- Video: animated "trends in frontier models" brief ---------- */
+  (function () {
+    const stage = document.getElementById("video-stage");
+    if (!stage) return;
+    const scenes = Array.prototype.slice.call(stage.querySelectorAll(".vscene"));
+    const starts = [0, 6, 17, 28, 39, 49, 56]; // scene start times (s); total = 60
+    const TOTAL = 60;
+    const playBtn = document.getElementById("video-play");
+    const replayBtn = document.getElementById("video-replay");
+    const prog = document.getElementById("video-progress");
+    const curEl = document.getElementById("video-cur");
+    const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    let playing = false, t = 0, last = 0, raf = null, finished = false, started = false, autoPaused = false;
+
+    function fmt(s) {
+      s = Math.max(0, Math.min(TOTAL, Math.round(s)));
+      return s >= 60 ? "1:00" : "0:" + (s < 10 ? "0" : "") + s;
+    }
+    function sceneIndex(time) {
+      let idx = 0;
+      for (let i = 0; i < starts.length; i++) { if (time >= starts[i]) idx = i; }
+      return idx;
+    }
+    function render() {
+      prog.style.width = (t / TOTAL) * 100 + "%";
+      curEl.textContent = fmt(t);
+      const ai = sceneIndex(t);
+      scenes.forEach(function (sc, k) { sc.classList.toggle("is-active", k === ai); });
+    }
+    function frame(now) {
+      if (!playing) return;
+      t += (now - last) / 1000;
+      last = now;
+      if (t >= TOTAL) { t = TOTAL; render(); finished = true; playing = false; playBtn.textContent = "↻ Replay"; return; }
+      render();
+      raf = requestAnimationFrame(frame);
+    }
+    function play() {
+      if (playing) return;
+      if (finished) { t = 0; finished = false; }
+      playing = true; started = true; autoPaused = false;
+      playBtn.textContent = "❚❚ Pause";
+      last = performance.now();
+      raf = requestAnimationFrame(frame);
+    }
+    function pause(auto) {
+      playing = false; autoPaused = !!auto;
+      if (raf) cancelAnimationFrame(raf);
+      playBtn.textContent = finished ? "↻ Replay" : "▶ Play";
+    }
+    playBtn.addEventListener("click", function () { if (playing) { pause(false); } else { play(); } });
+    replayBtn.addEventListener("click", function () { t = 0; finished = false; render(); play(); });
+    render();
+
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            if (!reduce && !finished && (!started || autoPaused)) play();
+          } else if (playing) {
+            pause(true);
+          }
+        });
+      }, { threshold: 0.5 });
+      io.observe(stage);
+    }
+  })();
+
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
