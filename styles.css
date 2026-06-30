@@ -593,7 +593,15 @@ em { font-style: normal; }
 .insight-exhibit svg .exh-cat { font-size: 13px; }
 .insight-exhibit svg .exh-val { font-family: var(--font-display); font-weight: 700; font-size: 13px; fill: var(--text); }
 .insight-exhibit svg .exh-track { fill: var(--border); }
+.insight-exhibit svg .exh-on { fill: #fff; }
 .insight-exhibit__source { margin: 1rem 0 0; font-size: 0.72rem; color: var(--text-soft); }
+/* Long-form article: section subheads + numbered playbook */
+.insight-card__h { font-family: var(--font-display); font-size: 1.18rem; font-weight: 600; letter-spacing: -0.3px; color: var(--text); margin: 2rem 0 0.7rem; }
+.insight-card__h em { font-family: var(--font-serif); font-style: italic; }
+.insight-playbook { display: grid; gap: 0.8rem; margin: 0.6rem 0 0.9rem; counter-reset: pb; }
+.insight-playbook li { position: relative; list-style: none; padding-left: 2.7rem; color: var(--text-muted); line-height: 1.55; }
+.insight-playbook li::before { counter-increment: pb; content: counter(pb); position: absolute; left: 0; top: 0.05rem; width: 1.85rem; height: 1.85rem; display: grid; place-items: center; font-family: var(--font-display); font-weight: 700; font-size: 0.85rem; color: #fff; background: var(--gradient); border-radius: 9px; }
+.insight-playbook li strong { color: var(--text); font-weight: 600; }
 @media (max-width: 560px) { .insight-stats { grid-template-columns: 1fr; } }
 
 /* ----- Contact ----- */
