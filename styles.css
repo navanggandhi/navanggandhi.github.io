@@ -527,6 +527,28 @@ em { font-style: normal; }
 
 /* ----- AI Thought Leadership ----- */
 .insights__intro { color: var(--text-muted); font-size: 1.08rem; max-width: 720px; margin: -1.75rem 0 2.75rem; }
+/* Two-column: category menu (left) + article feed */
+.insights-layout { display: grid; grid-template-columns: 232px minmax(0, 1fr); gap: 2.5rem; align-items: start; }
+.insights-cats { position: sticky; top: calc(var(--nav-h) + 1.4rem); }
+.insights-cats__title { font-family: var(--font-display); font-size: 0.72rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-soft); margin-bottom: 0.9rem; padding-left: 0.2rem; }
+.insights-cats__list { display: grid; gap: 0.4rem; }
+.cat-btn {
+  display: flex; align-items: center; justify-content: space-between; gap: 0.6rem; width: 100%;
+  font-family: var(--font-display); font-size: 0.92rem; font-weight: 600; text-align: left; cursor: pointer;
+  color: var(--text-muted); background: var(--surface); border: 1px solid var(--border); border-radius: 12px;
+  padding: 0.6rem 0.85rem; transition: color .25s ease, border-color .25s ease, background .25s ease, transform .2s ease;
+}
+.cat-btn:hover { color: var(--text); border-color: var(--border-strong); transform: translateX(2px); }
+.cat-btn.active { color: #fff; border-color: transparent; background: var(--gradient); }
+.cat-btn__count { font-size: 0.78rem; font-weight: 600; color: var(--text-soft); background: color-mix(in srgb, var(--text) 9%, transparent); border-radius: 999px; padding: 0.05rem 0.5rem; min-width: 1.6rem; text-align: center; }
+.cat-btn.active .cat-btn__count { color: #fff; background: rgba(255, 255, 255, 0.22); }
+@media (max-width: 860px) {
+  .insights-layout { grid-template-columns: 1fr; gap: 1.4rem; }
+  .insights-cats { position: static; }
+  .insights-cats__list { grid-auto-flow: column; grid-auto-columns: max-content; overflow-x: auto; gap: 0.5rem; padding-bottom: 0.4rem; -webkit-overflow-scrolling: touch; }
+  .cat-btn { white-space: nowrap; }
+  .cat-btn:hover { transform: none; }
+}
 .insights { display: grid; gap: 1.75rem; }
 .insight-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.3s ease, border-color 0.3s ease; }
 .insight-card:hover { transform: translateY(-4px); border-color: var(--border-strong); }

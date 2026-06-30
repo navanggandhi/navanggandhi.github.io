@@ -142,6 +142,56 @@
     });
   }
 
+  /* ---------- AI insights: category menu + filter ---------- */
+  (function () {
+    const feed = document.getElementById("insights-feed");
+    const catNav = document.getElementById("insights-cats");
+    if (!feed || !catNav) return;
+    // Known taxonomy (slug -> label) controls order and naming; unknown slugs
+    // found on articles still appear (title-cased) so categories grow on their own.
+    const LABELS = {
+      "agentic-ai": "Agentic AI",
+      "ai-security": "AI Security",
+      "identity-access": "Identity & Access",
+      "governance-risk": "Governance & Risk",
+      "financial-services": "Financial Services",
+      "llms-models": "LLMs & Models"
+    };
+    const ORDER = Object.keys(LABELS);
+    const articles = Array.prototype.slice.call(feed.querySelectorAll(".insight-card"));
+    const counts = {};
+    articles.forEach(function (a) {
+      (a.getAttribute("data-categories") || "").split(/\s+/).filter(Boolean).forEach(function (c) {
+        counts[c] = (counts[c] || 0) + 1;
+      });
+    });
+    const known = ORDER.filter(function (s) { return counts[s]; });
+    const unknown = Object.keys(counts).filter(function (s) { return ORDER.indexOf(s) === -1; }).sort();
+    const cats = known.concat(unknown);
+    function label(slug) {
+      return LABELS[slug] || slug.replace(/-/g, " ").replace(/\b\w/g, function (m) { return m.toUpperCase(); });
+    }
+    function row(cat, text, count, active) {
+      return '<li><button type="button" class="cat-btn' + (active ? " active" : "") +
+        '" data-cat="' + cat + '">' + text +
+        '<span class="cat-btn__count">' + count + "</span></button></li>";
+    }
+    const list = catNav.querySelector(".insights-cats__list");
+    list.innerHTML = row("all", "All", articles.length, true) +
+      cats.map(function (slug) { return row(slug, label(slug), counts[slug], false); }).join("");
+
+    list.addEventListener("click", function (e) {
+      const btn = e.target.closest(".cat-btn");
+      if (!btn) return;
+      const cat = btn.getAttribute("data-cat");
+      list.querySelectorAll(".cat-btn").forEach(function (b) { b.classList.toggle("active", b === btn); });
+      articles.forEach(function (a) {
+        const cs = (a.getAttribute("data-categories") || "").split(/\s+/);
+        a.style.display = (cat === "all" || cs.indexOf(cat) !== -1) ? "" : "none";
+      });
+    });
+  })();
+
   /* ---------- Footer year ---------- */
   const yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
