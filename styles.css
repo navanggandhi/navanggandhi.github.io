@@ -607,6 +607,8 @@ em { font-style: normal; }
 /* ----- Video / animated frontier-models brief ----- */
 .video__intro { color: var(--text-muted); font-size: 1.08rem; max-width: 680px; margin: -1.75rem auto 2.4rem; text-align: center; }
 .video { max-width: 940px; margin-inline: auto; padding: 0; overflow: hidden; }
+.video__player { display: block; width: 100%; aspect-ratio: 16 / 9; background: #07070c; border: 0; }
+.video__caption { text-align: center; color: var(--text-soft); font-size: 0.9rem; margin: 1.1rem auto 0; }
 .video__stage { position: relative; aspect-ratio: 16 / 9; overflow: hidden; background: linear-gradient(135deg, #141229 0%, #1d1233 55%, #0b2230 100%); }
 [data-theme="light"] .video__stage { background: linear-gradient(135deg, #ece9ff 0%, #f4e7f4 55%, #e2f3f8 100%); }
 .vscene { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 0.55rem; padding: clamp(1.4rem, 4vw, 3rem); opacity: 0; transition: opacity 0.6s ease; pointer-events: none; }
