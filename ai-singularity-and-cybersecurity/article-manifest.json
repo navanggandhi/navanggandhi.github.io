@@ -1,0 +1,28 @@
+{
+  "title": "The AI Singularity and Cybersecurity",
+  "canonical": "https://navanggandhi.com/ai-singularity-and-cybersecurity/",
+  "word_count": 11298,
+  "reading_minutes": 50,
+  "chapters": 13,
+  "figures": 12,
+  "source_count": 29,
+  "validation": {
+    "duplicate_ids": [],
+    "missing_assets": [],
+    "missing_anchors": [],
+    "images": 14,
+    "figures": 12,
+    "chapters": 13,
+    "links": 240,
+    "uhd_png_figures": 12,
+    "uhd_webp_figures": 12,
+    "responsive_viewports_passed": [
+      3840,
+      1920,
+      1024,
+      390
+    ],
+    "standalone_embedded_uhd_images": 13,
+    "status": "pass"
+  }
+}

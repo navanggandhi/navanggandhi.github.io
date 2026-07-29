@@ -754,3 +754,24 @@ em { font-style: normal; }
   .reveal { opacity: 1; transform: none; }
   .aurora { opacity: 0.3; }
 }
+
+/* ----- Research: featured essay ----- */
+.research-feature { display: block; overflow: hidden; margin-bottom: 2.6rem; transition: opacity 0.7s cubic-bezier(.2,.8,.2,1), transform 0.35s cubic-bezier(.2,.8,.2,1), box-shadow 0.35s ease; }
+.research-feature:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.research-feature__banner { display: block; position: relative; line-height: 0; }
+.research-feature__banner img { width: 100%; height: auto; display: block; aspect-ratio: 16 / 9; object-fit: cover; }
+.research-feature__banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(160deg, rgba(139,92,246,0.10), rgba(34,211,238,0.10)); opacity: 0; transition: opacity 0.35s ease; }
+.research-feature:hover .research-feature__banner::after { opacity: 1; }
+.research-feature__body { padding: 1.75rem 2rem 1.95rem; display: flex; flex-direction: column; gap: 0.7rem; }
+.research-feature__eyebrow { font-family: var(--font-display); font-size: 0.74rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); }
+.research-feature__title { font-family: var(--font-display); font-size: clamp(1.35rem, 2.4vw, 1.9rem); line-height: 1.14; margin: 0; letter-spacing: -0.4px; }
+.research-feature__title a { color: var(--text); transition: color 0.25s ease; }
+.research-feature__title a:hover { color: var(--accent); }
+.research-feature__sub { color: var(--text-muted); font-size: 1.02rem; max-width: 72ch; margin: 0; }
+.research-feature__meta { display: flex; flex-wrap: wrap; gap: 1.7rem; list-style: none; padding: 0.35rem 0 0.15rem; margin: 0; }
+.research-feature__meta li { display: flex; flex-direction: column; line-height: 1.05; }
+.research-feature__meta b { font-family: var(--font-display); font-size: 1.18rem; font-weight: 700; background: var(--gradient); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.research-feature__meta span { color: var(--text-soft); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; margin-top: 3px; }
+.research-feature__actions { display: flex; flex-wrap: wrap; gap: 0.8rem; margin-top: 0.65rem; }
+.research-feature__actions .btn { padding: 0.72rem 1.35rem; font-size: 0.92rem; }
+@media (max-width: 620px) { .research-feature__body { padding: 1.35rem 1.35rem 1.5rem; } }

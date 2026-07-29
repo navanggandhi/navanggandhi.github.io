@@ -1,0 +1,19 @@
+{
+  "duplicate_ids": [],
+  "missing_assets": [],
+  "missing_anchors": [],
+  "images": 14,
+  "figures": 12,
+  "chapters": 13,
+  "links": 240,
+  "uhd_png_figures": 12,
+  "uhd_webp_figures": 12,
+  "responsive_viewports_passed": [
+    3840,
+    1920,
+    1024,
+    390
+  ],
+  "standalone_embedded_uhd_images": 13,
+  "status": "pass"
+}
