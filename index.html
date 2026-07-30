@@ -272,6 +272,84 @@
               </ul>
             </div>
           </article>
+          <article class="insight-card glass reveal" data-categories="ai-security llms-models governance-risk">
+            <div class="insight-card__visual">
+              <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Nested topographic contour lines drawn as concentric irregular rings around a single glowing peak, representing the eroding security margin of a cryptographic scheme">
+                <defs>
+                  <linearGradient id="heroGrad-2026-07-28b" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0" stop-color="#ec4899"/>
+                    <stop offset="0.5" stop-color="#8b5cf6"/>
+                    <stop offset="1" stop-color="#22d3ee"/>
+                  </linearGradient>
+                  <radialGradient id="heroGlow-2026-07-28b" cx="54%" cy="48%" r="70%">
+                    <stop offset="0" stop-color="#8b5cf6" stop-opacity="0.18"/>
+                    <stop offset="0.5" stop-color="#ec4899" stop-opacity="0.08"/>
+                    <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+                  </radialGradient>
+                </defs>
+                <rect width="800" height="360" fill="url(#heroGlow-2026-07-28b)"/>
+                <path d="M657 156 C657 266.5 538.4 356 392 356 C245.6 356 127 266.5 127 156 C127 45.5 245.6 -44 392 -44 C538.4 -44 657 45.5 657 156 Z" fill="none" stroke="url(#heroGrad-2026-07-28b)" stroke-width="1.2" opacity="0.2"/>
+                <path d="M612 160 C612 248.4 518 320 402 320 C286 320 192 248.4 192 160 C192 71.6 286 0 402 0 C518 0 612 71.6 612 160 Z" fill="none" stroke="url(#heroGrad-2026-07-28b)" stroke-width="1.4" opacity="0.3"/>
+                <path d="M572 164 C572 232.5 500.4 288 412 288 C323.6 288 252 232.5 252 164 C252 95.5 323.6 40 412 40 C500.4 40 572 95.5 572 164 Z" fill="none" stroke="url(#heroGrad-2026-07-28b)" stroke-width="1.6" opacity="0.42"/>
+                <path d="M535 168 C535 217.7 483.5 258 420 258 C356.5 258 305 217.7 305 168 C305 118.3 356.5 78 420 78 C483.5 78 535 118.3 535 168 Z" fill="none" stroke="url(#heroGrad-2026-07-28b)" stroke-width="1.8" opacity="0.55"/>
+                <path d="M501 172 C501 204 467.4 230 426 230 C384.6 230 351 204 351 172 C351 140 384.6 114 426 114 C467.4 114 501 140 501 172 Z" fill="none" stroke="url(#heroGrad-2026-07-28b)" stroke-width="2" opacity="0.7"/>
+                <path d="M470 175 C470 191.6 452.1 205 430 205 C407.9 205 390 191.6 390 175 C390 158.4 407.9 145 430 145 C452.1 145 470 158.4 470 175 Z" fill="none" stroke="url(#heroGrad-2026-07-28b)" stroke-width="2.2" opacity="0.85"/>
+                <circle cx="535" cy="168" r="4" fill="#22d3ee" opacity="0.8"/>
+                <circle cx="351" cy="172" r="4" fill="#ec4899" opacity="0.8"/>
+                <circle cx="420" cy="258" r="4" fill="#8b5cf6" opacity="0.8"/>
+                <circle cx="430" cy="175" r="18" fill="url(#heroGrad-2026-07-28b)" opacity="0.3"/>
+                <circle cx="430" cy="175" r="10" fill="url(#heroGrad-2026-07-28b)" opacity="0.6"/>
+                <circle cx="430" cy="175" r="5" fill="#ffffff" opacity="0.95"/>
+              </svg>
+              <span class="insight-card__tag">AI Cryptanalysis</span>
+            </div>
+            <div class="insight-card__body">
+              <span class="insight-card__date">July 28, 2026</span>
+              <h3 class="insight-card__title">Claude Just Found Cryptographic Flaws Two Years of Expert Review Missed</h3>
+              <p class="insight-card__dek">Anthropic&rsquo;s Frontier Red Team turned a frontier model loose on two well-studied ciphers &mdash; and it surfaced real mathematical weaknesses in days, a signal that the cost of discovering cryptographic flaws is about to fall sharply.</p>
+              <div class="insight-stats">
+                <div class="insight-stat"><span class="insight-stat__num">200&ndash;800&times;</span><span class="insight-stat__label">faster than the prior best attack on 7-round AES-128</span></div>
+                <div class="insight-stat"><span class="insight-stat__num">60 hrs</span><span class="insight-stat__label">for Claude to crack a HAWK flaw that survived two years of human review</span></div>
+                <div class="insight-stat"><span class="insight-stat__num">2&#8310;&#8308; &rarr; 2&#179;&#8312;</span><span class="insight-stat__label">collapse in HAWK-256&rsquo;s expected attack cost (effective keysize halved)</span></div>
+              </div>
+              <p>On July 28, Anthropic&rsquo;s Frontier Red Team published results in which its Claude Mythos Preview model &mdash; working almost autonomously after light human prompting &mdash; found new mathematical weaknesses in two widely studied cryptographic algorithms. Neither breaks anything in production today. The method is the story: a general-purpose AI model is now a credible cryptanalyst.</p>
+              <h4 class="insight-card__h">What Claude actually <em>found</em></h4>
+              <p>Against HAWK, a post-quantum signature candidate, Claude surfaced a previously unused mathematical symmetry that enables a faster key-recovery attack, cutting HAWK-256&rsquo;s effective keysize in half &mdash; the expected attack cost fell from 2&#8310;&#8308; to 2&#179;&#8312; &mdash; in about 60 hours, after the design had absorbed two rounds of expert review over two years. Against a reduced seven-round version of AES-128, it improved the best known attack by 200 to 800&times;, eliminating a guessing step that previously meant checking 256 candidate values. Real-world AES-128 uses all ten rounds and is unaffected; HAWK is not deployed. The direction, not the immediate impact, is what matters.</p>
+              <figure class="insight-exhibit">
+                <svg viewBox="0 0 760 180" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="exhRing-2026-07-28b" x1="0" y1="0" x2="1" y2="1">
+                      <stop offset="0" stop-color="#8b5cf6"/>
+                      <stop offset="1" stop-color="#ec4899"/>
+                    </linearGradient>
+                  </defs>
+                  <circle cx="140" cy="90" r="64" fill="none" stroke="#8b5cf6" stroke-opacity="0.15" stroke-width="26"/>
+                  <circle cx="140" cy="90" r="64" fill="none" stroke="url(#exhRing-2026-07-28b)" stroke-width="26" stroke-linecap="round" stroke-dasharray="201 402.1" stroke-dashoffset="0" transform="rotate(-90 140 90)"/>
+                  <text class="exh-val" x="140" y="98" text-anchor="middle" style="font-size:30px">~50%</text>
+                  <text class="exh-cat" x="250" y="74">HAWK-256 effective keysize halved:</text>
+                  <text class="exh-cat" x="250" y="96">expected attack cost fell 2&#8310;&#8308; &rarr; 2&#179;&#8312;</text>
+                  <text class="exh-cat" x="250" y="118">(the scheme is not deployed in production)</text>
+                </svg>
+                <p class="insight-exhibit__source">Source: Anthropic Frontier Red Team, &ldquo;Discovering cryptographic weaknesses with Claude.&rdquo;</p>
+              </figure>
+              <h4 class="insight-card__h">What regulated firms should <em>do now</em></h4>
+              <ol class="insight-playbook">
+                <li><strong>Inventory your cryptography.</strong> Stand up a cryptographic bill of materials &mdash; every algorithm, key length, and protocol across applications, data-at-rest, and third parties &mdash; so you can move fast when a scheme is downgraded.</li>
+                <li><strong>Engineer for crypto-agility.</strong> Design systems so primitives can be swapped without re-architecting; assume today&rsquo;s &ldquo;secure&rdquo; algorithm may carry an advisory tomorrow.</li>
+                <li><strong>Migrate to PQC deliberately.</strong> Favor standardized, heavily-reviewed post-quantum schemes (NIST FIPS 203/204/205) over newer candidates, and track AI-assisted cryptanalysis as a live input to that roadmap.</li>
+                <li><strong>Put AI on defense first.</strong> The same autonomous analysis that finds these flaws can audit your own implementations &mdash; fund red-team use of frontier models before adversaries adopt them.</li>
+              </ol>
+              <p>If a model can halve a scheme&rsquo;s security margin in a weekend that experts probed for two years, cryptographic assurance stops being a one-time certification and becomes a continuous monitoring discipline.</p>
+              <h4 class="insight-card__links-title">Important links</h4>
+              <ul class="insight-card__links">
+                <li><a href="https://www.anthropic.com/research/discovering-cryptographic-weaknesses" target="_blank" rel="noopener">Discovering cryptographic weaknesses with Claude &mdash; Anthropic</a></li>
+                <li><a href="https://thehackernews.com/2026/07/claude-ai-just-cracked-post-quantum.html" target="_blank" rel="noopener">Claude AI Just Cracked a Post-Quantum Test Scheme and Found a Faster 7-Round AES Attack &mdash; The Hacker News</a></li>
+                <li><a href="https://simonwillison.net/2026/Jul/28/discovering-cryptographic-weaknesses-with-claude/" target="_blank" rel="noopener">Discovering cryptographic weaknesses with Claude &mdash; Simon Willison</a></li>
+                <li><a href="https://thenextweb.com/news/anthropic-claude-mythos-cryptographic-attacks-hawk-aes" target="_blank" rel="noopener">Claude found mathematical flaws in two cryptographic algorithms &mdash; The Next Web</a></li>
+                <li><a href="https://thequantuminsider.com/2026/07/29/ai-finds-new-weaknesses-in-cryptographic-algorithms-anthropic-says/" target="_blank" rel="noopener">AI Finds New Weaknesses in Cryptographic Algorithms, Anthropic Says &mdash; The Quantum Insider</a></li>
+              </ul>
+            </div>
+          </article>
           <article class="insight-card glass reveal" data-categories="governance-risk financial-services ai-security">
             <div class="insight-card__visual">
               <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="An orbital network of three concentric ellipses with nodes on their rings linked by faint lines to a glowing central core, representing AI systems being drawn into a single regulatory enforcement regime">
