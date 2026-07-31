@@ -8,13 +8,9 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
-    // Consent Mode v2 — analytics denied by default until the visitor accepts (banner in assets/consent.js)
-    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500 });
-    try { if (localStorage.getItem('cookie-consent') === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' }); } catch (e) {}
     gtag('js', new Date());
     gtag('config', 'G-2EE7ZNS5JD');
   </script>
-  <script defer src="assets/consent.js?v=1"></script>
   <meta name="description" content="Navang Gandhi is a Security and AI Leader with 26+ years in cloud security, identity (IAM), zero-trust, and the safe adoption of generative and agentic AI for financial-services and regulated enterprises." />
   <meta name="author" content="Navang Gandhi" />
   <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />

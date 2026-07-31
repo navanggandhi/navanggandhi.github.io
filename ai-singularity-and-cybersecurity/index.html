@@ -8,13 +8,9 @@
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){ dataLayer.push(arguments); }
-    // Consent Mode v2 — analytics denied by default until the visitor accepts (banner in ../assets/consent.js)
-    gtag('consent', 'default', { ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied', analytics_storage: 'denied', wait_for_update: 500 });
-    try { if (localStorage.getItem('cookie-consent') === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' }); } catch (e) {}
     gtag('js', new Date());
     gtag('config', 'G-2EE7ZNS5JD');
   </script>
-  <script defer src="../assets/consent.js?v=1"></script>
   <title>The AI Singularity and Cybersecurity | Navang Gandhi</title>
   <meta name="description" content="A deeply researched, evidence-led essay examining what an AI singularity would mean, why cybersecurity may encounter discontinuity first, and how leaders can build bounded autonomy, zero-trust agent controls, and machine-speed resilience.">
   <meta name="author" content="Navang Gandhi">
