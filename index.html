@@ -197,6 +197,96 @@
 
           <div class="insights" id="insights-feed">
           <!-- ARTICLES:TOP — the daily routine inserts each new <article class="insight-card glass reveal"> immediately below this line (newest first). Keep this marker. -->
+          <article class="insight-card glass reveal" data-categories="ai-security agentic-ai">
+            <div class="insight-card__visual">
+              <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract aurora ribbons: four luminous curves sweeping upward from left to right, the brightest climbing steeply toward a glowing anchor node at the upper right">
+                <defs>
+                  <linearGradient id="heroGrad-2026-10-01" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="0.5" stop-color="#8b5cf6"/><stop offset="1" stop-color="#ec4899"/></linearGradient>
+                  <radialGradient id="heroGlow-2026-10-01" cx="70%" cy="34%" r="78%"><stop offset="0" stop-color="#ec4899" stop-opacity="0.16"/><stop offset="0.5" stop-color="#8b5cf6" stop-opacity="0.09"/><stop offset="1" stop-color="#22d3ee" stop-opacity="0"/></radialGradient>
+                </defs>
+                <rect width="800" height="360" fill="url(#heroGlow-2026-10-01)"/>
+                <path d="M-20 120 C 200 140, 340 90, 500 110 S 700 70, 820 90" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-linecap="round" opacity="0.30"/>
+                <path d="M-20 200 C 180 160, 320 210, 460 180 S 680 110, 820 150" fill="none" stroke="#22d3ee" stroke-width="1.4" stroke-linecap="round" opacity="0.42"/>
+                <path d="M-20 250 C 140 270, 300 230, 420 200 S 660 150, 820 120" fill="none" stroke="url(#heroGrad-2026-10-01)" stroke-width="2.2" stroke-linecap="round" opacity="0.55"/>
+                <path d="M-20 300 C 160 290, 260 250, 400 220 S 640 120, 820 60" fill="none" stroke="url(#heroGrad-2026-10-01)" stroke-width="3.4" stroke-linecap="round" opacity="0.85"/>
+                <circle cx="263" cy="115" r="3" fill="#8b5cf6" opacity="0.55"/>
+                <circle cx="243" cy="186" r="3.4" fill="#22d3ee" opacity="0.60"/>
+                <circle cx="640" cy="139" r="4.2" fill="#22d3ee" opacity="0.75"/>
+                <circle cx="640" cy="139" r="1.5" fill="#ffffff"/>
+                <circle cx="100" cy="255" r="3" fill="#22d3ee" opacity="0.55"/>
+                <circle cx="205" cy="268" r="3.6" fill="#8b5cf6" opacity="0.70"/>
+                <circle cx="400" cy="220" r="4.2" fill="#8b5cf6" opacity="0.80"/>
+                <circle cx="499" cy="191" r="4.6" fill="#ec4899" opacity="0.85"/>
+                <circle cx="499" cy="191" r="1.6" fill="#ffffff"/>
+                <circle cx="595" cy="151" r="5" fill="#ec4899" opacity="0.88"/>
+                <circle cx="698" cy="106" r="24" fill="#ec4899" opacity="0.14"/>
+                <circle cx="698" cy="106" r="7.5" fill="url(#heroGrad-2026-10-01)" opacity="0.95"/>
+                <circle cx="698" cy="106" r="2.6" fill="#ffffff"/>
+              </svg>
+              <span class="insight-card__tag">Vuln Discovery</span>
+            </div>
+            <div class="insight-card__body">
+              <span class="insight-card__date">October 1, 2026</span>
+              <h3 class="insight-card__title">The Machine Finds the Front Door</h3>
+              <p class="insight-card__dek">Half of the vulnerabilities AI uncovers hand an attacker remote code execution, and most patch calendars were built for a slower, gentler finder.</p>
+              <div class="insight-stats">
+                <div class="insight-stat"><span class="insight-stat__num">1.9×</span><span class="insight-stat__label">how much more often AI-discovered flaws enable remote code execution than the CVE baseline (50% vs 26%)</span></div>
+                <div class="insight-stat"><span class="insight-stat__num">10,740</span><span class="insight-stat__label">CVEs disclosed in August 2026 alone, more than double January's 5,045</span></div>
+                <div class="insight-stat"><span class="insight-stat__num">+347%</span><span class="insight-stat__label">2026 surge in disclosed flaws in AI agent orchestration middleware</span></div>
+              </div>
+              <p>Google's Threat Intelligence Group published the clearest measurement yet of what AI is doing to the vulnerability pipeline, and the first headline is volume. Monthly CVE disclosures doubled between January and August, from 5,045 to 10,740. Exploitation kept pace: 141 newly disclosed flaws were exploited in the wild in the first eight months of 2026, already more than the 127 recorded across all of 2025, and zero-day exploitation peaked at 22 in August alone.</p>
+              <p>Volume is the less important finding. What AI finds is different in kind. Exactly half of the vulnerabilities GTIG attributes to AI discovery result in remote code execution, against 26 percent across the wider CVE ecosystem, and they skew away from low-impact classes such as information disclosure. The machine is not generating more noise; it is finding the front door. Increasingly it is finding it in the AI stack itself: more than 1,500 AI-related flaws were disclosed this year, half of them in agent orchestration middleware. When an autonomous research agent found an unauthenticated command-injection flaw in BeyondTrust's privileged remote access product, one threat cluster was exploiting it within four days of disclosure and five more within seven.</p>
+              <figure class="insight-exhibit">
+                <svg viewBox="0 0 760 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Dumbbell chart comparing conventionally discovered with AI-discovered vulnerabilities: remote code execution 26 percent versus 50 percent, medium risk rating 28 versus 58 percent, low risk rating 69 versus 39 percent, and information disclosure 18 versus 8 percent">
+                  <defs>
+                    <linearGradient id="exhDumb-2026-10-01" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#22d3ee"/></linearGradient>
+                    <linearGradient id="exhDumbR-2026-10-01" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#22d3ee"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient>
+                  </defs>
+                  <rect x="240" y="8" width="12" height="12" rx="3" fill="#8b5cf6"/>
+                  <text class="exh-cat" x="258" y="18">Conventionally discovered</text>
+                  <rect x="470" y="8" width="12" height="12" rx="3" fill="#22d3ee"/>
+                  <text class="exh-cat" x="488" y="18">AI-discovered</text>
+                  <text class="exh-cat" x="230" y="44" text-anchor="end">Remote code execution</text>
+                  <rect x="360" y="38.5" width="110" height="3" rx="1.5" fill="url(#exhDumb-2026-10-01)"/>
+                  <circle cx="360" cy="40" r="7" fill="#8b5cf6"/>
+                  <circle cx="470" cy="40" r="7" fill="#22d3ee"/>
+                  <text class="exh-val" x="346" y="44" text-anchor="end">26%</text>
+                  <text class="exh-val" x="484" y="44">50%</text>
+                  <text class="exh-cat" x="230" y="94" text-anchor="end">Medium risk rating</text>
+                  <rect x="369" y="88.5" width="138" height="3" rx="1.5" fill="url(#exhDumb-2026-10-01)"/>
+                  <circle cx="369" cy="90" r="7" fill="#8b5cf6"/>
+                  <circle cx="507" cy="90" r="7" fill="#22d3ee"/>
+                  <text class="exh-val" x="355" y="94" text-anchor="end">28%</text>
+                  <text class="exh-val" x="521" y="94">58%</text>
+                  <text class="exh-cat" x="230" y="144" text-anchor="end">Low risk rating</text>
+                  <rect x="419" y="138.5" width="138" height="3" rx="1.5" fill="url(#exhDumbR-2026-10-01)"/>
+                  <circle cx="557" cy="140" r="7" fill="#8b5cf6"/>
+                  <circle cx="419" cy="140" r="7" fill="#22d3ee"/>
+                  <text class="exh-val" x="405" y="144" text-anchor="end">39%</text>
+                  <text class="exh-val" x="571" y="144">69%</text>
+                  <text class="exh-cat" x="230" y="194" text-anchor="end">Information disclosure</text>
+                  <rect x="277" y="188.5" width="46" height="3" rx="1.5" fill="url(#exhDumbR-2026-10-01)"/>
+                  <circle cx="323" cy="190" r="7" fill="#8b5cf6"/>
+                  <circle cx="277" cy="190" r="7" fill="#22d3ee"/>
+                  <text class="exh-val" x="263" y="194" text-anchor="end">8%</text>
+                  <text class="exh-val" x="337" y="194">18%</text>
+                  <rect class="exh-track" x="240" y="220" width="460" height="1"/>
+                  <text class="exh-cat" x="240" y="240" text-anchor="middle">0%</text>
+                  <text class="exh-cat" x="470" y="240" text-anchor="middle">50%</text>
+                  <text class="exh-cat" x="700" y="240" text-anchor="middle">100%</text>
+                </svg>
+                <p class="insight-exhibit__source">Source: Google Threat Intelligence Group, Vulnerability Discovery and Exploitation Trends in the AI Era (September 30, 2026); share of vulnerabilities by risk rating and consequence.</p>
+              </figure>
+              <p>For regulated enterprises, a remediation model built on monthly cycles and CVSS scores now describes a slower adversary than the one we face. Three moves matter. Re-rank remediation by exploitability and exposure rather than score, and measure the service level for high-risk flaws on edge and privileged-access systems in days, not weeks. Treat agent frameworks, inference gateways and MCP servers as tier-one, internet-facing infrastructure — inventoried, authenticated and sandboxed — rather than experiments living outside the asset register. And point the same discovery capability at your own code before release, because the alternative is reading about your flaw in someone else's disclosure.</p>
+              <h4 class="insight-card__links-title">Important links</h4>
+              <ul class="insight-card__links">
+                <li><a href="https://cloud.google.com/blog/topics/threat-intelligence/vulnerability-discovery-and-exploitation-trends-in-the-ai-era/" target="_blank" rel="noopener">Vulnerability Discovery and Exploitation Trends in the AI Era — Google Threat Intelligence Group</a></li>
+                <li><a href="https://www.infosecurity-magazine.com/news/ai-found-vulnerabilities-rce/" target="_blank" rel="noopener">AI-Found Vulnerabilities More Likely to Enable RCE, Google Says — Infosecurity Magazine</a></li>
+                <li><a href="https://siliconangle.com/2026/09/30/google-finds-vulnerability-disclosures-doubled-as-ai-changes-which-flaws-get-discovered/" target="_blank" rel="noopener">Google finds vulnerability disclosures doubled as AI changes which flaws get discovered — SiliconANGLE</a></li>
+                <li><a href="https://industrialcyber.co/critical-infrastructure/google-gtig-finds-ai-accelerating-vulnerability-discovery-across-enterprise-and-critical-infrastructure-attack-surfaces/" target="_blank" rel="noopener">Google GTIG finds AI accelerating vulnerability discovery across enterprise and critical infrastructure attack surfaces — Industrial Cyber</a></li>
+              </ul>
+            </div>
+          </article>
           <article class="insight-card glass reveal" data-categories="agentic-ai ai-security governance-risk">
             <div class="insight-card__visual">
               <svg viewBox="0 0 800 360" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Abstract orbital network: three concentric elliptical rings around a glowing central core, with nodes on each orbit linked back to the centre by faint radial lines">
